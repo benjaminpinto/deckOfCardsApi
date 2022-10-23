@@ -1,6 +1,6 @@
 # Deck Of Cards API Testing Project
 
-![Cypress Tests](https://github.com/benjaminpinto/deckOfCardsApi/actions/workflows/cypressAction.yml/badge.svg)
+![Cypress Tests](https://github.com/benjaminpinto/deckOfCardsApi/actions/workflows/cypress.yml/badge.svg)
 
 This project uses Cypress to automate API tests upon [deckofcardsapi.com application](https://deckofcardsapi.com/).
 
