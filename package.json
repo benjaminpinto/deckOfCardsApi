@@ -4,12 +4,16 @@
   "description": "API testing with Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run",
-    "cy:open": "npx cypress open"
+    "test": "npx cypress run --env allure=true --reporter mocha-allure-reporter",
+    "cy:open": "npx cypress open",
+    "report:generate": "npx allure generate"
   },
   "author": "Benjamin Pinto",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^10.10.0"
+    "@shelex/cypress-allure-plugin": "^2.33.1",
+    "cypress": "^10.10.0",
+    "allure-commandline": "^2.18.1",
+    "mocha-allure-reporter": "^1.4.0"
   }
 }
