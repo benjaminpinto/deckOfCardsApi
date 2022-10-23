@@ -1,0 +1,15 @@
+{
+  "name": "deckofcardsapi",
+  "version": "1.0.0",
+  "description": "API testing with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "cy:open": "npx cypress open"
+  },
+  "author": "Benjamin Pinto",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.10.0"
+  }
+}
