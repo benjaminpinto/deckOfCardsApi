@@ -6,6 +6,10 @@ This project uses Cypress to automate API tests upon [deckofcardsapi.com applica
 
 This project is integrated with GitHub Actions to automate a simple CI workflow, and with GitHub Pages, to publish the last test results report.
 
+## Report Page
+
+The last report is available at [project's GH Page](https://benjaminpinto.github.io/deckOfCardsApi/5/).
+
 ## Pre-requirements
 
 It is required to have Node.js and npm installed to run this project.
