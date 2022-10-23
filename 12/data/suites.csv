@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Oct 23 21:24:00 GMT 2022","Sun Oct 23 21:24:00 GMT 2022","54","","Deck of Cards - Suite #001","","Deck of Cards - Suite #001","Drawing 3 cards","Drawing 3 cards",""
+"passed","Sun Oct 23 21:24:00 GMT 2022","Sun Oct 23 21:24:00 GMT 2022","92","","Deck of Cards - Suite #001","","Deck of Cards - Suite #001","Shuffling a deck","Shuffling a deck",""
+"passed","Sun Oct 23 21:24:00 GMT 2022","Sun Oct 23 21:24:00 GMT 2022","155","","Deck of Cards - Suite #001","","Deck of Cards - Suite #001","Creating a deck","Creating a deck",""
+"passed","Sun Oct 23 21:24:01 GMT 2022","Sun Oct 23 21:24:01 GMT 2022","198","","Deck of Cards - Suite #001","","Deck of Cards - Suite #001","Shuffling a pile","Shuffling a pile",""
+"passed","Sun Oct 23 21:24:01 GMT 2022","Sun Oct 23 21:24:01 GMT 2022","147","","Deck of Cards - Suite #001","","Deck of Cards - Suite #001","Drawing cards from piles","Drawing cards from piles",""
+"passed","Sun Oct 23 21:24:01 GMT 2022","Sun Oct 23 21:24:01 GMT 2022","170","","Deck of Cards - Suite #001","","Deck of Cards - Suite #001","List cards in piles","List cards in piles",""
+"passed","Sun Oct 23 21:24:00 GMT 2022","Sun Oct 23 21:24:01 GMT 2022","299","","Deck of Cards - Suite #001","","Deck of Cards - Suite #001","Drawing 5 cards to pile","Drawing 5 cards to pile",""
