@@ -9,6 +9,7 @@ This project is integrated with GitHub Actions to automate a simple CI workflow,
 ## Report Page
 
 The last report is available at [project's GH Page](https://benjaminpinto.github.io/deckOfCardsApi).
+The repository page is [available here](https://github.com/benjaminpinto/deckOfCardsApi).
 
 ## Pre-requirements
 
