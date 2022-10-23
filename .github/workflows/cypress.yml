@@ -3,52 +3,54 @@ name: Cypress Tests
 on: [push]
 
 jobs:
-  cypress-run:
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: true
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
-        # Install NPM dependencies, cache them correctly
-        # and run all Cypress tests
-        with:
-          record: false
-        env:
-          # pass GitHub token to detect new build vs re-run build
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-  allure:
-    name: Generate Allure Report
+  generate-report:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Download Cypress
+        uses: bahmutov/npm-install@v1
+        env:
+          CYPRESS_INSTALL_BINARY: 0
+
+      - name: Check Cypress cache
+        run: |
+          npx cypress cache path
+          npx cypress cache list
+      - name: restore / cache the binary
+        id: cache-cypress
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache/Cypress
+          key: >-
+            cypress-cache-v2-${{ runner.os }}-${{ hashFiles('**/package.json')
+            }}
+      - name: Install Cypress
+        run: |
+          npx cypress install
+          npx cypress cache list
+      - name: Run Cypress
+        continue-on-error: true
+        run: npm test
 
       - name: Get Allure history
         uses: actions/checkout@v2
         if: always()
         continue-on-error: true
         with:
-          ref: gh-pages
-          path: gh-pages
+          ref: allure
+          path: allure
 
-      - name: Allure Report action from marketplace
+      - name: Generate Allure Report
         uses: simple-elf/allure-report-action@master
         if: always()
-        #id: allure-report
         with:
           allure_results: allure-results
-          #gh_pages: gh-pages
-          #allure_report: allure-report
-          allure_history: allure-history
-          keep_reports: 20
+          gh_pages: allure
 
       - name: Deploy report to Github Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: allure
+          publish_dir: allure-history
