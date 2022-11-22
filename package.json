@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "deckofcardsapi",
   "version": "1.0.0",
   "description": "API testing with Cypress",
@@ -12,8 +13,9 @@
   "license": "ISC",
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.33.1",
-    "cypress": "^10.10.0",
     "allure-commandline": "^2.18.1",
+    "cypress": "^10.10.0",
+    "cypress-plugin-api": "^2.5.0",
     "mocha-allure-reporter": "^1.4.0"
   }
 }
